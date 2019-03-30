@@ -1,4 +1,7 @@
 Player      = require './elements/Player'
+PlayerIMG   = require './assets/player/Player.json'
+Mapa        = require './elements/Map'
+MapIMG      = require './assets/dungeon/Dungeon.json'
 
 class App extends PIXI.Application
 
@@ -9,14 +12,17 @@ class App extends PIXI.Application
     super(w,h,o)
     document.body.appendChild @view
     @animate()
-    @playerBuild()
+    PIXI.loader
+      .add(MapIMG)
+      .add(PlayerIMG)
+      .load(@build)
     window.addEventListener 'keydown', @onKeyDown
     window.addEventListener 'keyup', @onKeyUp
     window.addEventListener 'touchstart', @onTouchStart
 
-  playerBuild:()=>
+  build:()=>
     @player = new Player(@)
- 
+    @map = new Mapa(@)
 
   onTouchStart:(e)=>
     return if @player.crouch

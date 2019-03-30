@@ -20,7 +20,7 @@ config =
       loader: 'url-loader'
       options:
         limit: 8000
-        name: 'image/[hash]-[name].[ext]'
+        name: 'image/[name].[ext]'
   } ]
   resolve: extensions: [".web.coffee", ".web.js", ".coffee", ".js"]
   plugins: [

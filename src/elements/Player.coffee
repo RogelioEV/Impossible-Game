@@ -1,4 +1,3 @@
-PlayerIMG= require '../assets/player/Player.json'
 PlayerData  = require '../assets/player/Player.JSON'
 PlayerPNG   = require '../assets/player/Player.png'
 
@@ -17,8 +16,7 @@ class Player
 
   constructor: (app) ->
     @app = app
-    PIXI.loader.add(PlayerIMG).load(@build)
-
+    @build()
 
   build:=>
     for animation, frames of PlayerData.animations

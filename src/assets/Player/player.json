@@ -598,7 +598,7 @@
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "d9877a5d3f3a86c6bb3267377c260bfc-Player.png",
+	"image": "Player.png",
 	"format": "RGBA8888",
 	"size": {"w":849,"h":63},
 	"scale": "1",
