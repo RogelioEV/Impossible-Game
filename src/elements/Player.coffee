@@ -5,7 +5,7 @@ class Player
 
   animations      : {}
   x               : 100
-  y               : 725
+  y               : 700
   animationSpeed  : 0.1
   app             : null
   scale           : 2
@@ -55,9 +55,10 @@ class Player
     true
 
   collisions:=>
-    if @y >= 715
+    if @y >= 700
       @onGround = true
       @jumping = false
+      @y = 700
     else
       @onGround = false
 
